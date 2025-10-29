@@ -12,9 +12,9 @@
     </header>
     <section>
         <div id="inputs">
-            <p>Ano de Nascimento <input id="input_ano" type="number" placeholder="Digite o ano de nascimento..."></p>
-            <p>Sexo: <input type="radio" name="txt_sexo" id="txt_sexo_masc"> Masculino <input type="radio" name="txt_sexo_fem" id="txt_sexo_fem"> Feminino </p>
-            <button id="btn_verificar">Verificar</button>
+            <p>Ano de Nascimento <input id="input_ano" type="number" min="0" placeholder="Digite o ano de nascimento..."></p>
+            <p>Sexo: <input checked type="radio" name="txt_sexo" id="txt_sexo"> Masculino <input  type="radio" name="txt_sexo" id="txt_sexo"> Feminino </p>
+            <p><button onclick="verificar()" id="btn_verificar">Verificar</button></p>
         </div>
         <div id="dados_resultado">
             <p>Preencha os dados acima para ter o resultado!</p>

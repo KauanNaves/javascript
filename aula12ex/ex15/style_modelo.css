@@ -73,6 +73,11 @@ div#dados_resultado {
 
 }
 
+img#foto {
+    width: 500px;
+    height: 500px;
+}
+
 footer {
     color: white;
     text-align: center;
