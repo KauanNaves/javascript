@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: grey;
+            padding: 50px;
+        }
+        main {
+            background-color: white;
+            width: 400px;
+            height: 150px;
+            border-radius: 10px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input#txtpais {
+            border-radius: 10px;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1em;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.322);
+        }
+
+        div#resultado {
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Verificando Nacionalidade</h1>
+        <input type="text" id="txtpais" placeholder="Digite seu país..">
+        <button onclick="verificar()">Verificar</button>
+        <div id="resultado">
+            <p>Resultado</p>
+        </div>
+    </main>
+
+    <script>
+        function verificar() {
+            var input_pais = window.document.getElementById('txtpais')
+            var txt_pais = input_pais.value
+            var div_resultado = window.document.getElementById('resultado')
+            div_resultado.innerHTML = `<p>Morando em ${txt_pais}</p>`
+            if (txt_pais === "Brasil") {
+                div_resultado.innerHTML += `Você é Brasileiro!`
+            } else {
+                div_resultado.innerHTML += `Você é Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
